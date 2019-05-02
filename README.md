@@ -13,7 +13,7 @@ To add a PhpStorm shortcut, add the shortcut as below.
 ![](docs/phpstorm-shortcut.png)
 
 ### Settings
-You may use the [settings.jar](docs/settings.jar) for some other PhpStorm preferences.
+You may use the [settings.jar](phpstorm/settings.jar) for some other PhpStorm preferences.
 <br>
 <br>
 
