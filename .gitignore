@@ -38,6 +38,9 @@
 # Composer PHAR
 /composer.phar
 
-#Custom CS Config
+# Custom CS Config
 .php_cs
+
+# Jetbrains
+.idea/
 
