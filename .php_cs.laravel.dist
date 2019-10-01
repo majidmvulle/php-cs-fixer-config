@@ -33,7 +33,7 @@ $rules = [
         'phpdoc_order' => true,
         'semicolon_after_instruction' => true,
         'strict_comparison' => true,
-        'strict_param' => true,
+        'strict_param' => true
 ];
 
 return PhpCsFixer\Config::create()
