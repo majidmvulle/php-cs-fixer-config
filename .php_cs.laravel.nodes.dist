@@ -1,0 +1,26 @@
+<?php
+
+$finder = Symfony\Component\Finder\Finder::create()
+    ->notPath('bootstrap/cache')
+    ->notPath('storage')
+    ->notPath('vendor')
+    ->in(__DIR__)
+    ->name('*.php')
+    ->notName('*.blade.php')
+    ->ignoreDotFiles(true)
+    ->ignoreVCS(true);
+
+$rules = [
+        '@PHP73Migration' => true,
+        '@Symfony' => true,
+        '@Symfony:risky' => true,
+		'phpdoc_no_package' => false,
+		'phpdoc_no_access' => false,
+		'binary_operator_spaces' => ['default' => 'align_single_space_minimal'],
+];
+
+return PhpCsFixer\Config::create()
+    ->setRiskyAllowed(true)
+    ->setFinder($finder)
+    ->setRules($rules)
+    ->setUsingCache(false);
