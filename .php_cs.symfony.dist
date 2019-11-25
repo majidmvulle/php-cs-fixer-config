@@ -4,12 +4,13 @@ $finder = PhpCsFixer\Finder::create()
     ->exclude('*/DataFixtures')
     ->in(__DIR__);
 
-return PhpCsFixer\Config::create()
-    ->setRiskyAllowed(true)
-    ->setRules([
-        '@PHP71Migration' => true,
+$rules = [
+        '@PHP73Migration' => true,
         '@Symfony' => true,
         '@Symfony:risky' => true,
+		'phpdoc_no_package' => false,
+		'phpdoc_no_access' => false,
+		'binary_operator_spaces' => ['default' => 'align_single_space_minimal'],
         'array_syntax' => ['syntax' => 'short'],
         'combine_consecutive_unsets' => true,
         // one should use PHPUnit methods to set up expected exception instead of annotations
@@ -29,6 +30,11 @@ return PhpCsFixer\Config::create()
         'phpdoc_order' => true,
         'semicolon_after_instruction' => true,
         'strict_comparison' => true,
-        'strict_param' => true,
-    ])
-    ->setFinder($finder);
+        'strict_param' => true
+];
+
+return PhpCsFixer\Config::create()
+    ->setRiskyAllowed(true)
+    ->setFinder($finder)
+    ->setRules($rules)
+    ->setUsingCache(false);

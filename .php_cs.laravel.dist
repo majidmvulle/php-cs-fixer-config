@@ -11,9 +11,12 @@ $finder = Symfony\Component\Finder\Finder::create()
     ->ignoreVCS(true);
 
 $rules = [
-        '@PHP71Migration' => true,
+        '@PHP73Migration' => true,
         '@Symfony' => true,
         '@Symfony:risky' => true,
+		'phpdoc_no_package' => false,
+		'phpdoc_no_access' => false,
+		'binary_operator_spaces' => ['default' => 'align_single_space_minimal'],
         'array_syntax' => ['syntax' => 'short'],
         'combine_consecutive_unsets' => true,
         // one should use PHPUnit methods to set up expected exception instead of annotations
