@@ -3,7 +3,7 @@ A configuration for php-cs-fixer using Symfony and Laravel rules.
 ## PhpStorm
 
 ### Configuration
-To configure in PhpStorm, clone the repository locally and add as an external tool as below.
+To configure in PhpStorm, clone the repository locally (`composer install` obviously) and add as an external tool as below.
 
 ![](docs/phpstorm-configuration.png)
 
